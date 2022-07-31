@@ -1,0 +1,171 @@
+<!DOCTYpE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .alphabet:hover {
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main class="mt-16">
+        <section class="w-2/5 mx-auto">
+            <div class="grid grid-cols-1 p-10 bg-gray-700 text-white border border-gray-600 w-full rounded-lg">
+                <!-- calculator display -->
+                <div class="bg-black px-2 py-1 rounded">
+                    <div class="bg-green-100 h-24 p-4  text-black text-2xl">
+
+                        <p class="text-right" id="display-number"></p>
+                        <span id="store-number1"></span><span id="display-operator"></span>
+                        <span id="store-number2"></span>
+                        <p class="text-right" id="display-result"></p>
+
+
+                    </div>
+                </div>
+                <!-- calculator btn -->
+                <div class="grid grid-cols-4 grid-rows-4 gap-x-11 gap-y-5 justify-items-center mt-16  ">
+                    <div>
+                        <button
+                            class="h-14 w-20  rounded-lg border-b-4 border-black text-black font-medium text-3xl text-center alphabet bg-blue-400 align-middle inline-block"
+                            id="info">Info
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-red-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="ac">AC
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-yellow-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="mod">%
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-yellow-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="div">/
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="seven">7
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="eight">8
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="nine">9
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-yellow-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="mul">*
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="four">4
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="five">5
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="six">6
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-yellow-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="sub">-
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="one">1
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="two">2
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="three">3
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-yellow-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="sum">+
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="zero">0
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-white h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="float">.
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-red-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="clear">c
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-green-500 h-14 w-20 rounded-lg border-b-4 border-black text-black font-medium text-4xl text-center alphabet align-middle inline-block "
+                            id="result">=
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="/js/calculator.js"></script>
+
+</body>
+
+</html>
