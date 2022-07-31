@@ -4,7 +4,6 @@ function pressNumberButton(number, numberId) {
     numberInputId.addEventListener('click', function () {
         const displayNumber = document.getElementById('display-number');
         displayNumber.innerText = displayNumber.innerText + number;
-        const displayNumberValue = displayNumber.innerText;
 
     });
 
