@@ -81,6 +81,11 @@ function pressCbtn(btnId) {
 
         const clearDisplayNumber = document.getElementById('display-number');
         clearDisplayNumber.innerText = '';
+        const clearDisplayText1 = document.getElementById('display-info-1');
+        clearDisplayText1.innerText = '';
+        const clearDisplayText2 = document.getElementById('display-info-2');
+        clearDisplayText2.innerText = '';
+
 
     })
 }
@@ -96,9 +101,22 @@ function pressACbtn(btnId) {
         clearResult.innerText = '';
         const clearDisplayNumber = document.getElementById('display-number');
         clearDisplayNumber.innerText = '';
+        const clearDisplayText1 = document.getElementById('display-info-1');
+        clearDisplayText1.innerText = '';
+        const clearDisplayText2 = document.getElementById('display-info-2');
+        clearDisplayText2.innerText = '';
 
     })
 
+}
+function pressInfoBtn(btnId) {
+    document.getElementById(btnId).addEventListener('click', function () {
+        const clearNumber1 = document.getElementById('display-info-2');
+        clearNumber1.innerText = `develop by Yasin Khan Rabbi`;
+        const clearDisplayNumber = document.getElementById('display-info-1');
+        clearDisplayNumber.innerText = `This Calculator perform operation Between Two Numbers`;
+
+    })
 }
 
 // all number btn
@@ -125,5 +143,7 @@ pressEqualButton('result');
 pressCbtn('clear');
 //  C btn
 pressACbtn('ac');
-
+// 
+// info btn
+pressInfoBtn('info');
 
